@@ -2,22 +2,21 @@ from optparse import OptionParser
 import re
 import sys
 from collections import defaultdict
+import argparse
 
 
 def parse_options():
-    parser = OptionParser()
-    parser.add_option(
-        "-f",
-        "--file",
-        dest="filename",
-        default=None,
-        type="string",
-        help="Log filename",
-    )
-    opt, args = parser.parse_args()
-    if not opt.filename:
+    parser = argparse.ArgumentParser(description="Summarise a log file.")
+    parser.add_argument(
+        '-f', '--files',
+        dest='files_list',
+        nargs='+',
+        help='One or more files to summarise.'
+        )
+    args = parser.parse_args()
+    if not args.files_list:
         sys.exit("Error: You need to supply a filename using the -f argument")
-    return opt
+    return args
 
 
 def normalise_line(line):
@@ -31,15 +30,21 @@ def normalise_line(line):
     return normalised_line
 
 
+line_count = 0
+log_counts = defaultdict(int)
+
 def process_a_file(filename):
-    line_count = 0
-    log_counts = defaultdict(int)
+    global line_count
+    global log_counts
     with open(filename, "r") as fh:
         for line in fh:
             line_count += 1
             normalised_line = normalise_line(line)
             log_counts[normalised_line] += 1
 
+def print_summary():
+    global line_count
+    global log_counts
     print(f"processed {line_count} lines")
 
     sorted_items = sorted(log_counts.items(), key=lambda item: item[1])
@@ -52,5 +57,10 @@ def process_a_file(filename):
 
 
 if __name__ == "__main__":
-    opt = parse_options()
-    process_a_file(opt.filename)
+    args = parse_options()
+
+    for file in args.files_list:
+        process_a_file(file)
+    matched_file_string =  ",".join(args.files_list)
+    print_summary()
+    print(f"summary of {matched_file_string}")
