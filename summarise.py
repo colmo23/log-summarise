@@ -59,8 +59,14 @@ def print_summary():
 if __name__ == "__main__":
     args = parse_options()
 
+    processed_files = []
+    error_files = []
     for file in args.files_list:
-        process_a_file(file)
-    matched_file_string =  ",".join(args.files_list)
+        try:
+            process_a_file(file)
+            processed_files.append(file)
+        except UnicodeDecodeError:
+            print("error with {file}")
+            error_files.append(file)
     print_summary()
-    print(f"summary of {matched_file_string}")
+    print(f"summary of {processed_files} error files {error_files}")
