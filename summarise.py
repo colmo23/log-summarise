@@ -46,6 +46,7 @@ def process_a_file(filename):
     for key, value in sorted_items:
         print(f"{value}: {key}")
 
+
 #   for log_line in log_counts:
 #       print(f"{log_counts[log_line]}    --> {log_line}")
 
