@@ -1,4 +1,3 @@
-from optparse import OptionParser
 import re
 import sys
 from collections import defaultdict
@@ -8,11 +7,12 @@ import argparse
 def parse_options():
     parser = argparse.ArgumentParser(description="Summarise a log file.")
     parser.add_argument(
-        '-f', '--files',
-        dest='files_list',
-        nargs='+',
-        help='One or more files to summarise.'
-        )
+        "-f",
+        "--files",
+        dest="files_list",
+        nargs="+",
+        help="One or more files to summarise.",
+    )
     args = parser.parse_args()
     if not args.files_list:
         sys.exit("Error: You need to supply a filename using the -f argument")
@@ -33,6 +33,7 @@ def normalise_line(line):
 line_count = 0
 log_counts = defaultdict(int)
 
+
 def process_a_file(filename):
     global line_count
     global log_counts
@@ -41,6 +42,7 @@ def process_a_file(filename):
             line_count += 1
             normalised_line = normalise_line(line)
             log_counts[normalised_line] += 1
+
 
 def print_summary():
     global line_count
@@ -65,7 +67,7 @@ if __name__ == "__main__":
         try:
             process_a_file(file)
             processed_files.append(file)
-        except UnicodeDecodeError:
+        except (UnicodeDecodeError, IsADirectoryError):
             print("error with {file}")
             error_files.append(file)
     print_summary()
