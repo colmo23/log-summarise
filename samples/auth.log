@@ -1,0 +1,44 @@
+Oct 13 22:17:01 IEDUBWS100011 CRON[200516]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 13 22:17:01 IEDUBWS100011 CRON[200516]: pam_unix(cron:session): session closed for user root
+Oct 13 23:17:01 IEDUBWS100011 CRON[200547]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 13 23:17:01 IEDUBWS100011 CRON[200547]: pam_unix(cron:session): session closed for user root
+Oct 14 09:17:01 IEDUBWS100011 CRON[200748]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 14 09:17:01 IEDUBWS100011 CRON[200748]: pam_unix(cron:session): session closed for user root
+Oct 14 10:17:02 IEDUBWS100011 CRON[200764]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 14 10:17:02 IEDUBWS100011 CRON[200764]: pam_unix(cron:session): session closed for user root
+Oct 14 11:17:01 IEDUBWS100011 CRON[200768]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 14 11:17:01 IEDUBWS100011 CRON[200768]: pam_unix(cron:session): session closed for user root
+Oct 14 12:17:01 IEDUBWS100011 CRON[200772]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 14 12:17:01 IEDUBWS100011 CRON[200772]: pam_unix(cron:session): session closed for user root
+Oct 14 13:17:01 IEDUBWS100011 CRON[200777]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 14 13:17:01 IEDUBWS100011 CRON[200777]: pam_unix(cron:session): session closed for user root
+Oct 14 14:04:46 IEDUBWS100011 sudo:     colm : TTY=pts/0 ; PWD=/mnt/c/Users/colosh/Downloads/git/npp-products ; USER=root ; COMMAND=/usr/bin/vi /etc/resolv.conf
+Oct 14 14:04:46 IEDUBWS100011 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Oct 14 14:05:07 IEDUBWS100011 sudo: pam_unix(sudo:session): session closed for user root
+Oct 14 14:05:11 IEDUBWS100011 sudo:     colm : TTY=pts/0 ; PWD=/mnt/c/Users/colosh/Downloads/git/npp-products ; USER=root ; COMMAND=/usr/bin/vi /etc/resolv.conf
+Oct 14 14:05:11 IEDUBWS100011 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Oct 14 14:05:38 IEDUBWS100011 sudo: pam_unix(sudo:session): session closed for user root
+Oct 14 14:05:41 IEDUBWS100011 sudo:     colm : TTY=pts/0 ; PWD=/mnt/c/Users/colosh/Downloads/git/npp-products ; USER=root ; COMMAND=/usr/bin/rm /etc/resolv.conf sudo bash -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf' sudo bash -c 'echo "[network]" > /etc/wsl.conf' sudo bash -c 'echo "generateResolvConf = false" >> /etc/wsl.conf' sudo chattr +i /etc/resolv.conf
+Oct 14 14:05:41 IEDUBWS100011 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Oct 14 14:05:41 IEDUBWS100011 sudo: pam_unix(sudo:session): session closed for user root
+Oct 14 14:06:16 IEDUBWS100011 sudo:     colm : TTY=pts/0 ; PWD=/mnt/c/Users/colosh/Downloads/git/npp-products ; USER=root ; COMMAND=/usr/bin/rm /etc/resolv.conf
+Oct 14 14:06:16 IEDUBWS100011 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Oct 14 14:06:16 IEDUBWS100011 sudo: pam_unix(sudo:session): session closed for user root
+Oct 14 14:06:16 IEDUBWS100011 sudo:     colm : TTY=pts/0 ; PWD=/mnt/c/Users/colosh/Downloads/git/npp-products ; USER=root ; COMMAND=/usr/bin/bash -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'
+Oct 14 14:06:16 IEDUBWS100011 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Oct 14 14:06:16 IEDUBWS100011 sudo: pam_unix(sudo:session): session closed for user root
+Oct 14 14:06:16 IEDUBWS100011 sudo:     colm : TTY=pts/0 ; PWD=/mnt/c/Users/colosh/Downloads/git/npp-products ; USER=root ; COMMAND=/usr/bin/bash -c 'echo "[network]" > /etc/wsl.conf'
+Oct 14 14:06:16 IEDUBWS100011 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Oct 14 14:06:16 IEDUBWS100011 sudo: pam_unix(sudo:session): session closed for user root
+Oct 14 14:06:16 IEDUBWS100011 sudo:     colm : TTY=pts/0 ; PWD=/mnt/c/Users/colosh/Downloads/git/npp-products ; USER=root ; COMMAND=/usr/bin/bash -c 'echo "generateResolvConf = false" >> /etc/wsl.conf'
+Oct 14 14:06:16 IEDUBWS100011 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Oct 14 14:06:16 IEDUBWS100011 sudo: pam_unix(sudo:session): session closed for user root
+Oct 14 14:06:16 IEDUBWS100011 sudo:     colm : TTY=pts/0 ; PWD=/mnt/c/Users/colosh/Downloads/git/npp-products ; USER=root ; COMMAND=/usr/bin/chattr +i /etc/resolv.conf
+Oct 14 14:06:16 IEDUBWS100011 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Oct 14 14:06:16 IEDUBWS100011 sudo: pam_unix(sudo:session): session closed for user root
+Oct 14 14:17:01 IEDUBWS100011 CRON[200852]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 14 14:17:01 IEDUBWS100011 CRON[200852]: pam_unix(cron:session): session closed for user root
+Oct 14 15:17:01 IEDUBWS100011 CRON[200856]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Oct 14 15:17:01 IEDUBWS100011 CRON[200856]: pam_unix(cron:session): session closed for user root
+Oct 14 15:55:03 IEDUBWS100011 sudo:     colm : TTY=pts/0 ; PWD=/mnt/c/Users/colosh/Downloads/git/npp-products ; USER=root ; COMMAND=/usr/sbin/init 6
+Oct 14 15:55:03 IEDUBWS100011 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
