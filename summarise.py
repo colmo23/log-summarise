@@ -53,7 +53,7 @@ def process_a_file(filename, normalise_lines=True):
             if normalise_lines:
                 normalised_line = normalise_line(line)
             else:
-                normalised_line = line
+                normalised_line = line.strip()
             log_counts[normalised_line] += 1
 
 
