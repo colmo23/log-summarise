@@ -18,6 +18,13 @@ def parse_options():
         help="One or more files to summarise.",
     )
     parser.add_argument(
+        "-r",
+        "--reverse-order",
+        dest="reverse_order",
+        action="store_true",
+        help="List lines in reverse order",
+    )
+    parser.add_argument(
         "--do-not-normalise",
         dest="do_not_normalise",
         action="store_true",
@@ -57,12 +64,14 @@ def process_a_file(filename, normalise_lines=True):
             log_counts[normalised_line] += 1
 
 
-def print_summary():
+def print_summary(reverse_order=False):
     global line_count
     global log_counts
     print(f"processed {line_count} lines")
 
-    sorted_items = sorted(log_counts.items(), key=lambda item: item[1])
+    sorted_items = sorted(
+        log_counts.items(), key=lambda item: item[1], reverse=reverse_order
+    )
     for key, value in sorted_items:
         print(f"{value}: {key}")
 
@@ -87,5 +96,5 @@ if __name__ == "__main__":
         except (UnicodeDecodeError, IsADirectoryError):
             print("error with {file}")
             error_files.append(file)
-    print_summary()
+    print_summary(args.reverse_order)
     print(f"summary of {processed_files} error files {error_files}")
